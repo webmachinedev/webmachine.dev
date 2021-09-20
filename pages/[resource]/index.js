@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
 
-export default function View() {
+export default function Index() {
   const { resource, id } = useRouter().query;
   return (
     <div>
-      <p>{resource} {id}</p>
+      <p>{resource}</p>
     </div>
   );
 }
