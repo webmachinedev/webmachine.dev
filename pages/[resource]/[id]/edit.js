@@ -4,7 +4,9 @@ export default function Edit() {
   const { resource, id } = useRouter().query;
   return (
     <div>
-      <p>{resource} {id}</p>
+      <p>
+        {resource} {id}
+      </p>
     </div>
   );
 }
