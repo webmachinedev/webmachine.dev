@@ -5,6 +5,7 @@ import (
 	"net/http"
 
 	"github.com/webmachinedev/go-clients/db/functions"
+	"github.com/webmachinedev/go-clients/db/types"
 )
 
 type Request struct {
@@ -38,6 +39,10 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	switch req.Package {
 	case "github.com/webmachinedev/go-clients/db/types":
+		switch req.Function {
+		case "Index":
+			types.Index()
+		}
 	case "github.com/webmachinedev/go-clients/db/functions":
 		switch req.Function {
 		case "Index":
